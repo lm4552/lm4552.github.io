@@ -1,0 +1,72 @@
+ body {
+  background-color: white;
+  font-family:verdana,arial,helvetica;
+  width: 66%;
+  text-align: left;
+  margin: auto;
+}
+
+h1 {
+  color: darkgrey;
+  font-size: 1.6em;
+}
+
+.nav {
+  background-color: grey;
+  /*overflow: hidden;*/
+}
+
+.nav a, .dropdown button {
+  float: left;
+  text-align: center;
+  padding: 1em 1em;
+  text-decoration: none;
+  font-size: 1.3em;
+  color: white;
+}
+
+.nav a:hover {
+  background-color: lightblue;
+  color: black;
+}
+
+.nav a.active {
+  background-color: skyblue;
+  color: black;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown button {
+  border: none;
+  outline: none;
+  background-color: inherit;
+}
+
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 10em;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+  text-decoration: none;
+  background-color: lightgrey;
+  color: grey;
+  float:none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+button{
+  text-align: center;
+  min-width: 8em;
+}
