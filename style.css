@@ -4,7 +4,7 @@
  body {
   background-color: #10161A;
   font-family:arial,helvetica,verdana,tahoma;
-  width: 66%;
+  max-width: 1000px;
   text-align: left;
   margin: auto;
   color:#C4C6B6;
@@ -55,15 +55,16 @@ table, th, td {
   font-size: 0.95em;
 }
 
-
-.nav {
+nav {
   position: sticky;
   top: 0;
-  width: 30%;
+  width: 100%;
   display: inline-block;
+  z-index: 3;
+  background-color: #10161A;
 }
 
-.nav a{
+nav a{
   float: left;
   color: #C4C6B6;
   border: 1px solid #C4C6B6;
@@ -74,109 +75,38 @@ table, th, td {
   display: block;
 }
 
-.nav .dropdown.entry a{
+nav .dropdown.entry a{
   display: none;
   width: 4em;
 }
 
-
-.nav .dropdown.entry a:first-child{
+nav .dropdown.entry a:first-child{
   display: block;
-}
-
-.nav .dropdown.entry:hover a{
-  display: block;
-}
-
-
-/*
-.nav .dropdown.entry:hover a, .nav .dropdown.entry a:first-child{
-  display: inline-block;
-  position: absolute;
-}
-*/
-
-/*
-.nav .dropdown.entry:hover {
-  position: absolute;
-  display: block;
-}*/
-/*
-.nav .dropdown.entry:hover a{
-  margin: 0 0.25em;
-}
-
-.nav .dropdown.entry:hover a:first-child{
-  margin: 0.25em 0.25em 0 0.25em;
-}
-*/
-
-/*
-.nav .dropdown.entry:hover a{
-  position: absolute;
-  display: inline-block;
-}
-*/
-
-
-/*
-.nav a{
   float: left;
-  text-align: center;
-  padding: 1em 1em;
-  text-decoration: none;
-  font-size: 1.3em;
+}
+
+nav .dropdown.entry.active a:not(:first-child){
+  display: block;
+  float: right;
+  padding: 0.3em;
+  width: auto;
+  
+}
+
+nav a.active, nav .dropdown.entry.active a:first-child {
+  background-color: #B0733B;
   color: #C4C6B6;
-  border: 1px solid #C4C6B6;
-  margin-right: 5%;
-  background-color: #192127;
-}*/
+}
 
-
-/*
-.nav a:hover {
+nav a:hover {
   background-color: #4D7088;
   color: #C4C6B6;
 }
 
-.nav a.active {
-  background-color: #B0733B;
-  color: #C4C6B6;
-}
-*/
-
-/*
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  position: absolute;
-  z-index: 2;
-}
-
-.dropdown-content a:first-child {
-  display: block;
-}
-
-.dropdown-content a {
-  display: none;
-  float:none;
-  background-color: #192127;
-}
-
-.dropdown:hover .dropdown-content a{
-  display: block;
-}
-
-*/
 img{
   max-width: 100%;
   max-height: 350px;
 }
-
-
 
 .content>div{
   display:none;
@@ -189,17 +119,18 @@ img{
   margin-left: 34%;
 }
 
-
 #bottomNav h3:hover{
   background-color: #4D7088;
 }
 
 .content>div#bg_img{
   display:block;
-  width: 25%;
+  width: 200px;
   float: left;
-  height: 950px;
+  height: 400px;
+  min-width: 200px;
   color: transparent;
+  margin-top: 5%;
 }
 
 .content>div#bg_img img{
@@ -208,14 +139,82 @@ img{
     width:auto;
     object-fit: cover;
     filter:  hue-rotate(135deg) grayscale(50%) opacity(60%);
-    clip-path: polygon(0 0, 100% 0, 100% 100%);
-    margin-top: 10%;
+    clip-path: polygon(160px 100px,0px 200px ,160px 300px) ;
     position: relative;
     z-index: -1;
 }
 
 .content>div:target{
+  margin-top: 5%;
   display:block;
-  width: 66%;
+  width: calc(100% - 220px);
   float:right;
+}
+
+#triangle0, #triangle1, #triangle2, #triangle3, #triangle4, #triangle5, #triangle6, #triangle7{
+  position: absolute;
+  width: 200px;
+  height: 400px;
+}
+
+#triangle0{
+  background: #C4C6B6;
+  clip-path: polygon(112px 4px,200px 65px ,112px 120px) ;
+}
+
+/*
+#triangle1{
+  background: #C4C6B6;
+  clip-path: polygon(104px 125px,48px 90px ,48px 160px) ;
+} */
+
+#triangle1{
+  background: #C4C6B6;
+  clip-path: polygon(95px 115px,55px 90px ,95px 65px) ;
+} 
+
+
+#triangle2{
+  background: #7C7A2F;
+  /*clip-path: polygon(103px 125px,49px 91px ,49px 159px) ;*/
+  clip-path: polygon(104px 125px,48px 90px ,48px 160px) ;
+} 
+
+#triangle3{
+  background: #4D7088;
+  clip-path: polygon(120px 285px,16px 220px ,16px 350px) ;
+}
+
+#triangle4{
+  background: #B0733B;
+  clip-path: polygon(165px 110px,165px 150px ,198px 130px) ;
+}    
+
+#triangle5{
+  background: #B0733B;
+  clip-path: polygon(111px 385px,39px 340px ,111px 295px) ;
+}    
+
+#triangle6{
+  background: #192127;
+  /*clip-path: polygon(95px 115px,55px 90px ,95px 65px) ;*/
+  clip-path: polygon(94px 114px,56px 90px ,94px 66px) ;
+} 
+
+#triangle7{
+  background: #192127;
+  clip-path: polygon(160px 100px,0px 200px ,160px 300px) ;
+  z-index: -1;
+}    
+
+@media screen and (max-width: 500px) {
+  .content>div#bg_img {
+    display: none;
+  }
+  .content>div:target{
+    width: 90%;
+    float: none;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
 }

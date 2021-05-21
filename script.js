@@ -5,15 +5,15 @@ window.onhashchange = set_active_nav;
 function init(){
     replace_html_objects_with_its_contents();
     set_active_nav();
-    document.querySelector('#bottomNav h3:first-child').onclick = function(){ change_bottomNav(true)};
-    document.querySelector('#bottomNav h3:last-child').onclick = function(){ change_bottomNav(false)};
+    document.querySelector('#bottomNav h3:first-child').onclick = function(){ change_bottomNav(true);};
+    document.querySelector('#bottomNav h3:last-child').onclick = function(){ change_bottomNav(false);};
 }
 
 
 
 function change_bottomNav(prev){
 
-    let entrys = document.getElementsByClassName('nav')[0].querySelectorAll('.entry a');
+    let entrys = document.getElementsByTagName('nav')[0].querySelectorAll('.entry a');
     let i = 0;
 
     for(i = 0; i< entrys.length; i++){
@@ -34,17 +34,26 @@ function set_active_nav(){
     window.scrollTo(0, 0);
     
     if (window.location.hash){
-        let entrys = document.getElementsByClassName('nav')[0].querySelectorAll('.entry a');
+        
+        let dropdowns = document.getElementsByTagName('nav')[0].querySelectorAll('.entry.dropdown');
+        for(let i = 0; i< dropdowns.length; i++)
+            dropdowns[i].className = 'entry dropdown';
 
+        let entrys = document.getElementsByTagName('nav')[0].querySelectorAll('.entry a');
         for(let i = 0; i< entrys.length; i++){
-            if('#'+entrys[i].href.split('#').slice(-1) == window.location.hash)
+            if('#'+entrys[i].href.split('#').slice(-1) == window.location.hash){
                 entrys[i].className = 'active';
-            else
+                if (entrys[i].parentNode.className.includes('dropdown')){
+                    entrys[i].parentNode.className += ' active'
+                }
+            }else{
                 entrys[i].className = '';
+            }
         }
     }else{
         document.getElementById('defaultNav').className = 'active';
     }
+    find_and_set_background();
 }
 
 function replace_html_objects_with_its_contents(){
@@ -67,16 +76,24 @@ function replace_html_objects_with_its_contents(){
 
 function find_and_set_background(){
 
-    let imgs = document.querySelector('.content>div:target').getElementsByTagName('img');
+    
     let div_img = document.getElementById('bg_img');
     div_img.innerHTML = '';
-    let i;
 
-    for(i = 0; i< imgs.length;i++){
-        if (imgs[i].src.split('.').pop() != 'svg'){
-            div_img.appendChild(imgs[i].cloneNode(true));
-            div_img.firstChild.removeAttribute('width');
-            break;
-        }
+    for(let j = 0; j <= 7; j++){
+        let triangle = document.createElement('div');
+        triangle.id = 'triangle'+j;
+        div_img.appendChild(triangle);
     }
+
+    let imgs = document.querySelector('.content>div:target').getElementsByTagName('img');
+    let i;
+    if (imgs != null)
+        for(i = 0; i< imgs.length;i++){
+            if (imgs[i].src.split('.').pop() != 'svg'){
+                div_img.appendChild(imgs[i].cloneNode(true));
+                div_img.firstChild.removeAttribute('width');
+                break;
+            }
+        }
 }
