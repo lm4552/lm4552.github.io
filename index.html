@@ -4,26 +4,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>lm4552 page</title>
 <link href="style.css" rel="stylesheet" type="text/css" media="all">
+<script src="script.js" defer></script> 
 </head>
 <body>
 </br>
+<div>
 <div class="nav">
-    <a class="active" href="#index">Home</a>
-    <div class="dropdown">
-        <button>Projects </button>
-        <div class="dropdown-content">
+    <div class="entry">
+        <a id="defaultNav" href="#index">Home</a>
+    </div>
+    <div class="entry">
+        <a href="#stuff">Stuff</a>
+    </div>
+    <div class="dropdown entry">
             <a href="#projects">Projects</a>
-            <a href="#project1">Project 1</a>
-            <a href="#project2">Project 2</a> 
-        </div>
-      </div>
+            <a href="#/pages/projects/automatic_canister_filling/readme.html">Automatic Canister Filling</a>
+            <a href="#Test">Test</a> 
+    </div>
 </div> 
+</div>
 
 </br>
 
-<div class="md">
-    <object name="proj1" class="md" type="text/html" data="./pages/projects/automatic_canister_filling/readme.html" height="800px" width="100%"></object>
+<div class="content">
+
+    <div id="bg_img"></div>
+
+    <div  id="index">Home</div>
+
+    <div  id="stuff">Stuff</div>
+
+    <div  id="projects">Projects</div>
+
+    <div class="insertHtml" id="/pages/projects/automatic_canister_filling/readme.html"></div>
+
+    <div  id="Test">Test</div> 
+
 </div>
+
+<div id="bottomNav"><h3 id="prev"><</h3><h3 id="next">></h3></div>
 
 </body>
 </html> 
