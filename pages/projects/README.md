@@ -2,7 +2,7 @@
 
 # Projects
 
-The type of projects I work on in my freetime can be roughly calssified into the following groups:  
+The type of projects I work on in my freetime can be roughly classified into the following groups:  
 
 - Microcontroller projects:
     - a
