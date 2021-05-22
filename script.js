@@ -32,6 +32,10 @@ function change_bottomNav(prev){
 
 function set_active_nav(){
     window.scrollTo(0, 0);
+
+    if(! window.location.hash)
+        window.location.href = document.getElementById('defaultNav').href;
+
     
     if (window.location.hash){
         
