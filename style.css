@@ -2,7 +2,7 @@
  /* colors: bg 10161A, bg sec#192127, font #C4C6B6, #4D7088, links #7C7A2F, #B0733B */
 
  body {
-  background-color: #10161A;
+  background-color: #192127;
   font-family:arial,helvetica,verdana,tahoma;
   max-width: 1000px;
   text-align: left;
@@ -14,7 +14,7 @@ h1 {
   color: #C4C6B6;
   font-size: 1.6em;
   border: 1px solid #C4C6B6;
-  padding:3% 6%;
+  padding:2% 5%;
   display:inline-block;
   background-color: #192127;
 }
@@ -22,7 +22,7 @@ h1 {
 h2 {
   color: #C4C6B6;
   border: 1px solid #C4C6B6;
-  padding:2% 5%;
+  padding:2% 4%;
   display:inline-block;
   background-color: #192127;
 }
@@ -42,6 +42,7 @@ h4 {
 
 table{
   margin: 5% 0; 
+  overflow: auto;
 }
 
 th{
@@ -61,7 +62,7 @@ nav {
   width: 100%;
   display: inline-block;
   z-index: 3;
-  background-color: #10161A;
+  background-color: #192127;
 }
 
 nav a{
@@ -70,7 +71,7 @@ nav a{
   border: 1px solid #C4C6B6;
   padding: 1em;
   margin: 0.25em;
-  background-color: #192127;
+  background-color: #10161A;
   text-decoration: none;
   display: block;
 }
@@ -90,7 +91,6 @@ nav .dropdown.entry.active a:not(:first-child){
   float: right;
   padding: 0.3em;
   width: auto;
-  
 }
 
 nav a.active, nav .dropdown.entry.active a:first-child {
@@ -130,9 +130,12 @@ img{
 
 #bottomNav{
   display: inline-block;
-  width: 66%;
+  width: 100%;
   text-align: center;
-  margin-left: 34%;
+}
+
+#bottomNav h3{
+  background-color: #10161A;
 }
 
 #bottomNav h3:hover{
@@ -162,9 +165,22 @@ img{
 
 .content>div:target{
   margin-top: 5%;
+  margin-left: 1%;
+  padding: 2%;
   display:block;
-  width: calc(100% - 220px);
+  width: calc(100% - 250px);
   float:right;
+  background-color: #10161A;
+  border-radius: 10px;
+}
+
+.content ul{
+  padding-left:1em;
+}
+
+.content li li{
+  list-style-type: "-" ;
+  padding-inline-start: 0.5em;
 }
 
 #triangle0, #triangle1, #triangle2, #triangle3, #triangle4, #triangle5, #triangle6, #triangle7{
@@ -212,25 +228,28 @@ img{
 }    
 
 #triangle6{
-  background: #192127;
+  background: #10161A;
   /*clip-path: polygon(95px 115px,55px 90px ,95px 65px) ;*/
   clip-path: polygon(94px 114px,56px 90px ,94px 66px) ;
 } 
 
 #triangle7{
-  background: #192127;
+  background: #10161A;
   clip-path: polygon(160px 100px,0px 200px ,160px 300px) ;
   z-index: -1;
 }    
 
 @media screen and (max-width: 500px) {
   .content>div#bg_img {
-    display: none;
+    transform: rotate(90deg) translate(-190px,-50px) scale(1,-1) scale(0.5);
+    position:absolute ;
+    margin-top: -70px;
   }
   .content>div:target{
     width: 90%;
     float: none;
-    margin-right: 5%;
-    margin-left: 5%;
+    margin-top: 110px;
+    margin-right: 3%;
+    margin-left: 3%;
   }
 }
