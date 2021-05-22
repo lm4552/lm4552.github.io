@@ -112,6 +112,22 @@ img{
   display:none;
 }
 
+.content>div a{
+  text-decoration: none;
+}
+
+.content>div a:link{
+  color: #7C7A2F;
+}
+
+.content>div a:visited{
+  color:#4D7088;
+}
+
+.content>div a:hover{
+  color:#B0733B;
+}
+
 #bottomNav{
   display: inline-block;
   width: 66%;
