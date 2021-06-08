@@ -16,6 +16,5 @@ Of course taking pictures is a part of these activities.
 
 If you've read this far, you can as well leave me a message and tell me what you think about this little page.
 
-- [Mail](placeholder@domain.mail)
-- [GitHub](https://github.com/lm4552)
-- [LinkedIn](./)
+- [Mail](./)
+- [GitHub](https://github.com/lm4552) 

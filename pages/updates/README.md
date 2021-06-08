@@ -1,5 +1,5 @@
 ## Updates
-You can find some updates on my projects and also on some other things.
+Here you can find some updates on my projects and also on some other things.
 
 ___
 
