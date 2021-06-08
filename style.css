@@ -56,6 +56,31 @@ table, th, td {
   font-size: 0.95em;
 }
 
+div.img_frame{
+  float: inline-start;
+  width: 45%;
+  margin: 1%;
+}
+
+div.img_frame table{
+  margin: auto;
+  width: 100%;
+}
+
+div.img_frame th{
+  padding: 0;
+}
+
+div.img_frame td{
+  text-align: center;
+}
+
+div.img_frame th img{
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 nav {
   position: sticky;
   top: 0;
@@ -255,5 +280,8 @@ img{
     margin-top: 110px;
     margin-right: 3%;
     margin-left: 3%;
+  }
+  div.img_frame{
+    width: 100%;
   }
 }
