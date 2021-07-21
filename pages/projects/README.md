@@ -5,16 +5,10 @@
 The type of projects I work on in my freetime can be roughly classified into the following groups:  
 
 - Microcontroller projects:
-    - a
-    - b
-    - c
+    - none so far
 - Hardware projects:
     - <a href="#/pages/projects/automatic_canister_filling/readme.html">Automatic Canister Filling</a>
-    - y
-    - z
 - Software projects
-    - 1
-    - 2
-    - 3
+    - none so far
 - Other projects
-    - test
+    - none so far

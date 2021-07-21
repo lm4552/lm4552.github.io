@@ -62,6 +62,21 @@ div.img_frame{
   margin: 1%;
 }
 
+div.img_frame.img_wide{
+  width: 100%;
+}
+
+div.img_frame.img_wide img{
+  max-height: 700px;
+  object-fit: contain;
+}
+
+div.img_frame.img_wide table{
+  width: auto;
+  margin-bottom: 2em;
+  float: inline-start;
+}
+
 div.img_frame table{
   margin: auto;
   width: 100%;
@@ -182,7 +197,7 @@ img{
     max-height: none;
     width:auto;
     object-fit: cover;
-    filter:  hue-rotate(135deg) grayscale(50%) opacity(60%);
+    filter: grayscale(30%) opacity(80%);
     clip-path: polygon(160px 100px,0px 200px ,160px 300px) ;
     position: relative;
     z-index: -1;
