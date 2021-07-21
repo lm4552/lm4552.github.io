@@ -3,6 +3,14 @@ Here you can find some updates on my projects and also on some other things.
 
 ___
 
+### New Gallery Section
+#### 21st July 2021
+
+There is a new section wich I will use to upload photos and images.
+I added two collections of photos from my fish tanks.  
+
+___
+
 ### New Page
 #### 29th May 2021
 
