@@ -3,11 +3,14 @@
 
  body {
   background-color: #192127;
-  font-family:arial,helvetica,verdana,tahoma;
+  font-family:'HankenLight',arial,helvetica,verdana,tahoma,sans-serif;
   max-width: 1000px;
   text-align: left;
   margin: auto;
   color:#C4C6B6;
+  font-weight: normal;
+   font-style: normal;
+   line-height: 1.25;
 }
 
 h1 {
@@ -106,31 +109,27 @@ nav {
 }
 
 nav a{
-  float: left;
+  float: inline-start;
   color: #C4C6B6;
   border: 1px solid #C4C6B6;
-  padding: 1em;
+  padding: 0.75em;
   margin: 0.25em;
   background-color: #10161A;
   text-decoration: none;
   display: block;
 }
 
-nav .dropdown.entry a{
+nav .dropdown.entry a:not(:first-child){
   display: none;
-  width: 4em;
-}
-
-nav .dropdown.entry a:first-child{
-  display: block;
-  float: left;
 }
 
 nav .dropdown.entry.active a:not(:first-child){
   display: block;
-  float: right;
-  padding: 0.3em;
-  width: auto;
+  float: inline-end;
+  padding: 0.25em;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  vertical-align: middle;
 }
 
 nav a.active, nav .dropdown.entry.active a:first-child {
