@@ -98,6 +98,9 @@ div.img_frame th img{
   object-fit: cover;
   display: block;
 }
+div.img_frame th img.gif{
+  max-height: initial;
+}
 
 nav {
   position: sticky;
