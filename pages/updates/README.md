@@ -3,6 +3,16 @@ Here you can find some updates on my projects and also on some other things.
 
 ___
 
+### New WiFi Controller Project
+#### 1st September 2021
+
+I completely refactored an old project to make it usable for more different applications. 
+The new project and a description is now available [here](#/pages/projects/wifi_controller/readme.html).
+It is a project to control and schedule GPIOs states of an ESP32 from a webinterface. 
+In the past, I used this project to toggle, dim and time different LED channels of aquarium lights. 
+
+___
+
 ### New Gallery Section
 #### 21st July 2021
 
