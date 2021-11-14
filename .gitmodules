@@ -4,3 +4,6 @@
 [submodule "pages/projects/wifi_controller"]
 	path = pages/projects/wifi_controller
 	url = https://github.com/lm4552/wifi_controller
+[submodule "pages/projects/simple_temp_controller"]
+	path = pages/projects/simple_temp_controller
+	url = https://github.com/lm4552/simple_temp_controller.git
