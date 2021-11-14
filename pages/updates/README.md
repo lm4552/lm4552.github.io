@@ -1,5 +1,13 @@
 ## Updates
-Here you can find some updates on my projects and also on some other things.
+Here you can find some updates on my projects and other things.
+
+___
+
+### New Temperature Control Project
+#### 14th Novemeber 2021
+
+For repairing an old fridge, I built a simple device to control the cooling according to a temperature measured by a sensor. 
+You can find it [here](#/pages/projects/simple_temp_controller/readme.html).
 
 ___
 
