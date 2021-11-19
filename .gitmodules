@@ -10,5 +10,4 @@
 [submodule "pages/projects/aquarium_light"]
 	path = pages/projects/aquarium_light
 	url = https://github.com/lm4552/wifi_controller.git
-[submodule "pages/projects/aquarium_light/"]
 	branch = aquarium_light
