@@ -7,3 +7,8 @@
 [submodule "pages/projects/simple_temp_controller"]
 	path = pages/projects/simple_temp_controller
 	url = https://github.com/lm4552/simple_temp_controller.git
+[submodule "pages/projects/aquarium_light"]
+	path = pages/projects/aquarium_light
+	url = https://github.com/lm4552/wifi_controller.git
+[submodule "pages/projects/aquarium_light/"]
+	branch = aquarium_light
