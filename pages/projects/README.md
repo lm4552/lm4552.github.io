@@ -17,4 +17,7 @@ The following projects are already on this website:
 - <a href="#/pages/projects/automatic_canister_filling/readme.html">Automatic Canister Filling</a> 
     - Purpose: Switching a solenoid valve via water-level switch
     - Application: Osmosis Plant  
+- <a href="#/pages/projects/aquarium_light/readme.html">Aquarium Light</a> 
+    - Purpose: Controlling multiple channels of an 12V LED lighting for an aquarium
+    - Application: Aquarium lights based on <a href="#/pages/projects/wifi_controller/readme.html">WiFi Controller</a> project
 

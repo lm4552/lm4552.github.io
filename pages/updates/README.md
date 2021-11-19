@@ -3,6 +3,13 @@ Here you can find some updates on my projects and other things.
 
 ___
 
+### New Aquarium Light Project Page
+#### 19th Novemeber 2021
+
+Under [this](#/pages/projects/aquarium_light/readme.html) link there is now the description for the aquarium light project which is based on the [WiFi controller](#/pages/projects/wifi_controller/readme.html) project.
+
+___
+
 ### New Temperature Control Project
 #### 14th Novemeber 2021
 
