@@ -1,17 +1,25 @@
 ## Updates
 Here you can find some updates on my projects and other things.
 
+
+___
+
+### New Aquarium Cooler Section
+#### 26th November 2021
+
+I extended the refrigerator [temperature control project](#/pages/projects/simple_temp_controller/readme.html) with a new section about the hardware setup for an aquarium cooler.
+
 ___
 
 ### New Aquarium Light Project Page
-#### 19th Novemeber 2021
+#### 19th November 2021
 
 Under [this](#/pages/projects/aquarium_light/readme.html) link there is now the description for the aquarium light project which is based on the [WiFi controller](#/pages/projects/wifi_controller/readme.html) project.
 
 ___
 
 ### New Temperature Control Project
-#### 14th Novemeber 2021
+#### 14th November 2021
 
 For repairing an old fridge, I built a simple device to control the cooling according to a temperature measured by a sensor. 
 You can find it [here](#/pages/projects/simple_temp_controller/readme.html).
