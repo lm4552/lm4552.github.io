@@ -10,6 +10,29 @@ function init(){
 }
 
 
+function init_image_zoom(){
+
+    document.getElementById('imageZoom').onclick = function(){
+        document.getElementById('imageZoom').style.display = 'none';
+    }; 
+    let img_elems = document.getElementsByClassName('content')[0].getElementsByTagName('img');
+    for (let i = 0; i < img_elems.length; i++){
+        img_elems[i].onclick = function(){ 
+            if (window.location.hash =='#/pages/gallery/readme.html'){
+                let html_str = img_elems[i].parentNode.parentNode.parentNode.parentNode.children[1].innerHTML
+                html_str = html_str.substring(html_str.indexOf('<a href=')+9);
+                html_str = html_str.substring(0,html_str.indexOf('>')-1);
+                window.location.href = html_str;
+            }else{
+                document.getElementById('imageZoom').children[2].innerHTML = "";
+                document.getElementById('imageZoom').style.display = 'block';
+                let img = document.createElement('img');
+                img.src = img_elems[i].src;
+                document.getElementById('imageZoom').children[2].appendChild(img); 
+            }
+        };
+    }
+}
 
 function change_bottomNav(prev){
 
@@ -90,14 +113,18 @@ function find_and_set_background(){
         div_img.appendChild(triangle);
     }
 
-    let imgs = document.querySelector('.content>div:target').getElementsByTagName('img');
-    let i;
-    if (imgs != null)
-        for(i = 0; i< imgs.length;i++){
-            if (imgs[i].src.split('.').pop() != 'svg'){
-                div_img.appendChild(imgs[i].cloneNode(true));
-                div_img.firstChild.removeAttribute('width');
-                break;
+    let img_sel = document.querySelector('.content>div:target');
+    if (img_sel != null){
+        let imgs = img_sel.getElementsByTagName('img');
+        let i;
+        if (imgs != null)
+            for(i = 0; i< imgs.length;i++){
+                if (imgs[i].src.split('.').pop() != 'svg'){
+                    div_img.appendChild(imgs[i].cloneNode(true));
+                    div_img.firstChild.removeAttribute('width');
+                    break;
+                }
             }
-        }
+    }
+    init_image_zoom();
 }
