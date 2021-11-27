@@ -1,12 +1,77 @@
 
 window.onload = init;
 window.onhashchange = set_active_nav;
+window.onhashchange = function(){
+    window.scrollTo(0,0);
+};
 
 function init(){
     replace_html_objects_with_its_contents();
     set_active_nav();
     document.querySelector('#bottomNav h3:first-child').onclick = function(){ change_bottomNav(true);};
     document.querySelector('#bottomNav h3:last-child').onclick = function(){ change_bottomNav(false);};
+}
+
+function init_left_sidebar(){
+    if (document.getElementById('leftSidebar').firstChild.innerHTML == ""){
+        // left sidebar -> gallery
+        document.getElementById('leftSidebar').firstChild.innerHTML = "<h3><a href=\"#/pages/gallery/readme.html\">Gallery</a></h3>";
+
+        let img_sel = document.querySelectorAll('.content > div')
+        for(let i = 0; i< img_sel.length;i++){
+            if (img_sel[i].id == '/pages/gallery/readme.html')
+                img_sel =  img_sel[i];
+        }
+
+        if (img_sel != null){
+            let imgs = img_sel.getElementsByTagName('img');
+            if (imgs != null)
+                for(let i = 0; i< imgs.length;i++){
+                    if (imgs[i].src.split('.').pop() != 'svg'){
+                        let img = imgs[i].cloneNode(true);
+                        img.onclick = function(){
+                            window.location.href = '#/pages/gallery/readme.html';
+                            }
+                        document.getElementById('leftSidebar').firstChild.appendChild(img);
+                        if (i > 3)
+                            break;
+                    }
+                }
+        }
+    }
+}
+
+function init_right_sidebar(){
+    if (document.getElementById('rightSidebar').firstChild.innerHTML == ""){
+        // right sidebar -> updates
+        document.getElementById('rightSidebar').firstChild.innerHTML = "<h3><a href=\"#/pages/updates/readme.html\">Updates</a></h3>";
+
+        let ent_sel = document.querySelectorAll('.content > div')
+        for(let i = 0; i< ent_sel.length;i++){
+            if (ent_sel[i].id == '/pages/updates/readme.html')
+                ent_sel =  ent_sel[i];
+        }
+
+        if (ent_sel != null){
+            let ents = ent_sel.children;//.getElementsByTagName('hr');
+            console.log(ents);
+            let i = 0;
+            let cur_ent = ents[0];
+            while (cur_ent.nextSibling.tagName != 'HR')
+                cur_ent = cur_ent.nextSibling;
+            while (i < 4){
+                let elem = cur_ent.cloneNode(true);
+                elem.onclick = function(){
+                    window.location.href = '#/pages/updates/readme.html';
+                    }
+                if (cur_ent.tagName == 'HR')
+                    i = i+1;
+                else
+                    document.getElementById('rightSidebar').firstChild.appendChild(elem);
+                cur_ent = cur_ent.nextSibling;
+            }
+        }
+    }
 }
 
 
@@ -54,7 +119,7 @@ function change_bottomNav(prev){
 }
 
 function set_active_nav(){
-    window.scrollTo(0, 0);
+
 
     if(! window.location.hash)
         window.location.href = document.getElementById('defaultNav').href;
@@ -90,10 +155,14 @@ function replace_html_objects_with_its_contents(){
 
         let xhr = new XMLHttpRequest();
         xhr.onload = function() {
-            if (xhr.status == 200) 
+            if (xhr.status == 200)
                 contents[i].innerHTML = xhr.response.replaceAll('src=\"./', 'src=\".'+contents[i].id.split('/').slice(0,-1).join('/')+'/' );
             else
                 console.error('Error!');
+            if (contents[i].id == '/pages/updates/readme.html')
+                init_right_sidebar();
+            if (contents[i].id == '/pages/gallery/readme.html')
+                init_left_sidebar();
             find_and_set_background();
         }
         xhr.open("GET", contents[i].id);
