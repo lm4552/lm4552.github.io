@@ -1,8 +1,8 @@
 
 window.onload = init;
-window.onhashchange = set_active_nav;
 window.onhashchange = function(){
     window.scrollTo(0,0);
+    set_active_nav();
 };
 
 function init(){
@@ -53,8 +53,7 @@ function init_right_sidebar(){
         }
 
         if (ent_sel != null){
-            let ents = ent_sel.children;//.getElementsByTagName('hr');
-            console.log(ents);
+            let ents = ent_sel.children;
             let i = 0;
             let cur_ent = ents[0];
             while (cur_ent.nextSibling.tagName != 'HR')
