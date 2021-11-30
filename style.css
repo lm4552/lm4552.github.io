@@ -195,7 +195,7 @@ img{
 
 .content>div#bg_img{
   display:block;
-  width: 150px;
+  width: 200px;
   float: left;
   height: 400px;
   min-width: 150px;
@@ -295,6 +295,12 @@ img{
 
 #leftSidebar.sidebar div {
   float: right;
+  text-align: center;
+}
+
+#leftSidebar.sidebar div h3{
+  float: left;
+  margin: 1em 1em 1em 10% ;
 }
 
 .sidebar div {
@@ -310,7 +316,7 @@ img{
 
 .sidebar div img{
   margin: 1em 0 ;
-  width: 100%;
+  width: 80%;
   border: 1px solid rgba(196, 198, 182,0.5); 
 }
 
@@ -336,6 +342,14 @@ img{
 
 #imageZoom div img[src$=".svg"] {
   background-color: #C4C6B6;
+}
+
+#imageZoom button{
+  color: #C4C6B6;
+  border: 1px solid #C4C6B6;
+  padding:1% 1%;
+  display:inline-block;
+  background-color: #192127;
 }
 
 #triangle0, #triangle1, #triangle2, #triangle3, #triangle4, #triangle5, #triangle6, #triangle7{

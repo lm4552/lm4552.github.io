@@ -13,7 +13,7 @@ The following projects are already on this website:
     - Purpose: Switching a cooler to control an adjustable temperature 
     - Application: Refrigerator Mod, Aquarium Coooler  
     - Software: MCU code in MicroPython
-    - Components: Raspberry Pi Pico , MOSFET modules, stripboards, 7 segement displays, push buttons, LEDs, temperature sensor  
+    - Components: Raspberry Pi Pico , MOSFET modules, stripboards, 7 segement displays, push buttons, LEDs, temperature sensor, AMS1117 LDO  
 - <a href="#/pages/projects/automatic_canister_filling/readme.html">Automatic Canister Filling</a> 
     - Purpose: Switching a solenoid valve via water-level switch
     - Application: Osmosis Plant  
