@@ -102,6 +102,7 @@ div.img_frame th img{
   width: 100%;
   object-fit: cover;
   display: block;
+  object-position: top;
 }
 div.img_frame th img.gif{
   max-height: initial;
