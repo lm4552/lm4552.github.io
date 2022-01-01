@@ -408,6 +408,11 @@ img{
   z-index: -1;
 }    
 
+hr{
+  width:100%;
+  float: inline-start;
+}
+
 @media screen and (min-aspect-ratio: 4/3){
   .sidebar{
       display: block;
