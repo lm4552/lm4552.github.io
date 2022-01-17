@@ -17,5 +17,11 @@ At this place I am sporadically uploading collections of photos.
 |---|
 |<a href="#/pages/gallery/nano_tank_apr21/readme.html">❐ Nano Tank Apr'21</a>|
 </div>
+<div class="img_frame">
+
+|![](./dolomites_dec21/images/img1.jpg)|
+|---|
+|<a href="#/pages/gallery/dolomites_dec21/readme.html">❐ Dolomites Dec'21</a>|
+</div>
 </div></br>
 

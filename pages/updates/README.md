@@ -1,6 +1,13 @@
 ## Updates
 Here you can find some updates on my projects and other things.
 
+___
+
+### New Photos from Italy
+#### 18th January 2022
+
+I uploaded some photos from my last trip to the Dolomites. You can find it [here](#/pages/gallery/dolomites_dec21/readme.html).
+
 
 ___
 
