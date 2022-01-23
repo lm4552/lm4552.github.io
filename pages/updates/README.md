@@ -1,6 +1,14 @@
 ## Updates
 Here you can find some updates on my projects and other things.
 
+
+___
+
+### Added old music vote project
+#### 23rd January 2022
+
+A couple of years ago, I built a small web-application with a simple bot. The application allows to enter music wishes and upvote wishes from others. The music player bot does then select the most voted titles to play next. However, the [Music Vote](#/pages/projects/music_vote/readme.html) project needs some work.
+
 ___
 
 ### New Photos from Italy

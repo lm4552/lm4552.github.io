@@ -11,3 +11,6 @@
 	path = pages/projects/aquarium_light
 	url = https://github.com/lm4552/wifi_controller.git
 	branch = aquarium_light
+[submodule "pages/projects/music_vote"]
+	path = pages/projects/music_vote
+	url = https://github.com/lm4552/music_vote.git
