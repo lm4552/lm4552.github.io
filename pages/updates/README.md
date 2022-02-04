@@ -1,6 +1,13 @@
 ## Updates
 Here you can find some updates on my projects and other things.
 
+___
+
+### Added actual pictures of the aquarium light
+#### 4th February 2022
+
+I added some pictures of the actual aquarium light to the pictures of the controller for the [aquarium light](#/pages/projects/aquarium_light/readme.html). 
+I built the lights from LED strips, stainless steel profiles and a glass pane.
 
 ___
 
